@@ -1,19 +1,20 @@
-getgenv().Mode = "OneClick"
-getgenv().Setting = {
-    ["Team"] = "Marines", -- Options "Pirates", "Marines"
-    ["FucusOnLevel"] = true,
-    ["Fruits"] = {  -- setting for fruits u want
-        ["Primary"] = { -- if current fruit is not in this list, eat/buy
-            "Dragon-Dragon",
-            -- u can configs add mores/remove and must end with , (comma symbol)
-        },
-        ["Normal"] = { -- it just a normal fruit list
-            "Dragon-Dragon",
-            -- u can configs add mores/remove and must end with , (comma symbol)
-        }
-        -- run this for get all fruit name `local t={};for _,v in pairs(game.ReplicatedStorage.Remotes.CommF_:InvokeServer("GetFruits"))do table.insert(t,`"{v.Name}"`)end;setclipboard(table.concat(t, "\n"))`
+getgenv().Config = {
+    Team = "Pirates",
+    FarmConfig = {
+        ["Out game when done all"] = true,
+        ["Bypass Teleport"] = true,
+        ["Double Quest(RISK)"] = true
     },
-    ["IdleCheck"] = 150, -- every (x) seconds if not moving rejoin
-};
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/xQuartyx/QuartyzScript/main/Loader.lua"))()
+    Items = {
+        ["Saber"] = true,
+        ["Pole (1st form)"] = true,
+        ["Skull Guitar"] = true,
+        ["Cursed Dual Katana"] = true,
+        ["Godhuman"] = true
+    },
+    Webhook = {
+        ["Enabled"] = false,
+        ["Url"] = ""
+    }
+}
+loadstring(game:HttpGet("https://api.luarmor.net/files/v4/loaders/d6c7959dcc94cd24467080d82a56dcf9.lua"))()
